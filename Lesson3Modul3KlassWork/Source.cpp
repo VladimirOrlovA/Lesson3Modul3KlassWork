@@ -221,18 +221,18 @@ start2:
 	
 	if (payment > price)
 	{
-		printf("\nÂîçüìèòå Âàøó îòêðûòêó è ñäà÷ó\n");
 		change = payment - price;
+		printf("\nÂîçüìèòå Âàøó îòêðûòêó è ñäà÷ó %d \n", change);
 
 		int b1, b2, b3, b4, b5; // b1 êóïþðà 2000  b2 êóïþðà 1000   b3 êóïþðà 500   b4 êóïþðà 200  b5 êóïþðà 100
 
 		if (change >= 2000) { b1 = change / 2000; printf("\nÊóïþðû ïî 2000 - %d øò.\n", b1); change = change - b1 * 2000; }
 				
-		if (change > 1000 && change < 2000) { b2 = change / 1000; printf("\nÊóïþðû ïî 1000 - %d øò.\n", b2); change = change - b2 * 1000; }
+		if (change >= 1000 && change < 2000) { b2 = change / 1000; printf("\nÊóïþðû ïî 1000 - %d øò.\n", b2); change = change - b2 * 1000; }
 				
-		if (change > 500 && change < 1000) { b3 = change / 500; printf("\nÊóïþðû ïî 500 - %d øò.\n", b3); change = change - b3 * 500; }
-		if (change > 200 && change < 500) { b4 = change / 200; printf("\nÊóïþðû ïî 200 - %d øò.\n", b4); change = change - b4 * 200; }
-		if (change > 100 && change < 200) { b4 = change / 200; printf("\nÊóïþðû ïî 100 - %d øò.\n", b4); change = change - b4 * 100; }
+		if (change >= 500 && change < 1000) { b3 = change / 500; printf("\nÊóïþðû ïî 500 - %d øò.\n", b3); change = change - b3 * 500; }
+		if (change >= 200 && change < 500) { b4 = change / 200; printf("\nÊóïþðû ïî 200 - %d øò.\n", b4); change = change - b4 * 200; }
+		if (change >= 100 && change < 200) { b4 = change / 200; printf("\nÊóïþðû ïî 100 - %d øò.\n", b4); change = change - b4 * 100; }
 	}
 	
 
@@ -249,7 +249,7 @@ int main()
 
 start:
 
-	printf("Enter number of task from (1) to (8) => ");
+	printf("Enter number of task from (1) to (9) => ");
 	scanf_s("%d", &task);
 
 	switch (task)
